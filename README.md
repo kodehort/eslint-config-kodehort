@@ -3,6 +3,10 @@
 `eslint-config-kodehort` is a curated set of ESLint configurations that can be
 across our projects and can be used in your projects. It includes a set of
 rules that are designed to help you write clean, maintainable, and error-free code.
+It is inspired by the config in [template-typescript-node-package](https://github.com/JoshuaKGoldberg/template-typescript-node-package)
+but with further customisation and intended to be included as a dependency across
+our projects. Rather than add this all to a template it is included as a package
+enabling updates to be pulled forward into consuming projects.
 
 ## Installation
 
@@ -10,6 +14,12 @@ To install `eslint-config-kodehort`, run the following command:
 
 ```sh
 npm install --save-dev kodehort/eslint-config-kodehort
+```
+
+Or:
+
+```sh
+pnpm add kodehort/eslint-config-kodehort -D
 ```
 
 ## Usage
