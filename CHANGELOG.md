@@ -1,3 +1,5 @@
+### [2.0.3](https://github.com/kodehort/eslint-config-kodehort/compare/v2.0.2...v2.0.3) (2023-06-19)
+
 ### [2.0.2](https://github.com/kodehort/eslint-config-kodehort/compare/v2.0.1...v2.0.2) (2023-06-19)
 
 
