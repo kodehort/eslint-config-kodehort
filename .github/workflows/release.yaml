@@ -25,9 +25,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18.x"
-          registry-url: "https://npm.pkg.github.com"
-          # Defaults to the user or organization that owns the workflow file
-          scope: "@octocat"
 
       - id: pnpm-cache-config
         shell: bash
@@ -48,16 +45,6 @@ jobs:
       - name: install deps (with cache)
         if: steps.deps-cache.outputs.cache-hit != 'true'
         run: pnpm install
-
-      - name: Conventional Changelog Action
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
-        with:
-          preset: conventionalcommits
-          skip-on-empty: false
-          github-token: ${{ secrets.github_token }}
-          git-user-name: "GitHub Actions [bot]"
-          git-user-email: "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Create Release Pull Request or Publish
         id: changesets
