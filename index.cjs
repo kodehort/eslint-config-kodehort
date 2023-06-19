@@ -117,7 +117,6 @@ module.exports = {
   root: true,
   rules: {
     // These off/less-strict-by-default rules work well for this repo and we like them on.
-    "@typescript-eslint/no-unused-vars": ["error", { caughtErrors: "all" }],
     "import/extensions": ["error", "ignorePackages"],
     "n/no-missing-import": [
       "error",
