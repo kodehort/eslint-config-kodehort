@@ -1,3 +1,10 @@
+### [2.0.2](https://github.com/kodehort/eslint-config-kodehort/compare/v2.0.1...v2.0.2) (2023-06-19)
+
+
+### Bug Fixes
+
+* correct the call the the release API ([183130d](https://github.com/kodehort/eslint-config-kodehort/commit/183130dd9db9dae1652c791c6cb5cb7905a9ed31))
+
 ### [2.0.1](https://github.com/kodehort/eslint-config-kodehort/compare/v2.0.0...v2.0.1) (2023-06-19)
 
 ## [2.0.0](https://github.com/kodehort/eslint-config-kodehort/compare/v1.1.0...v2.0.0) (2023-06-19)
