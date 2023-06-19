@@ -9,6 +9,11 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+    outputs:
+      release_id: ${{ steps.create-release.outputs.result }}
+      change_log: ${{ steps.changelog.outputs.clean_changelog }}
+      version: ${{ steps.changelog.outputs.version }}
+      tag: ${{ steps.changelog.outputs.tag }}
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
@@ -69,7 +74,7 @@ jobs:
               name: `${process.env.RELEASE_TAG}`,
               body: `${process.env.RELEASE_LOG}`,
               draft: false,
-              prerelease: false
+              prerelease: false,
               make_latest: 'legacy'
             });
             return data.id
