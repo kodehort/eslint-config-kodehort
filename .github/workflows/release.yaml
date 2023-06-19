@@ -6,6 +6,8 @@ on:
       - main
 jobs:
   release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -52,13 +54,22 @@ jobs:
           git-user-email: "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Create Release
-        uses: ncipollo/release-action@v1.12.0
+        id: create-release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        uses: actions/github-script@v6
         env:
-          GITHUB_TOKEN: ${{ secrets.github_token }}
+          RELEASE_TAG: ${{ steps.changelog.outputs.tag }}
+          RELEASE_LOG: ${{ steps.changelog.outputs.clean_changelog }}
         with:
-          makeLatest: true
-          skipIfReleaseExists: true
-          tag: ${{ steps.changelog.outputs.tag }}
-          name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
+          script: |
+            const { data } = await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: `${process.env.RELEASE_TAG}`,
+              name: `${process.env.RELEASE_TAG}`,
+              body: `${process.env.RELEASE_LOG}`,
+              draft: false,
+              prerelease: false
+              make_latest: 'legacy'
+            });
+            return data.id
