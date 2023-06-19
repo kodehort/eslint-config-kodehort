@@ -46,6 +46,7 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           preset: conventionalcommits
+          skip-on-empty: false
           github-token: ${{ secrets.github_token }}
           git-user-name: "GitHub Actions [bot]"
           git-user-email: "41898282+github-actions[bot]@users.noreply.github.com"
