@@ -10,7 +10,13 @@ enabling updates to be pulled forward into consuming projects.
 
 ## Installation
 
-To install `eslint-config-kodehort`, run the following command:
+1. You'll first need to install [ESLint](https://eslint.org/):
+
+```sh
+npm install eslint --save-dev
+```
+
+2. Next, install `eslint-config-kodehort`, run the following command:
 
 ```sh
 npm install --save-dev kodehort/eslint-config-kodehort
