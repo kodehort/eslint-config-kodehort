@@ -1,5 +1,5 @@
 ---
-name: Release
+name: Create release and publish package
 on:
   push:
     branches:
@@ -8,6 +8,7 @@ jobs:
   release:
     permissions:
       contents: write
+      packages: write
     runs-on: ubuntu-latest
     outputs:
       release_id: ${{ steps.create-release.outputs.result }}
@@ -78,3 +79,7 @@ jobs:
               make_latest: 'legacy'
             });
             return data.id
+
+      - run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
