@@ -50,7 +50,6 @@ configuration file. Here's an example `.eslintrc.json` file:
 - `@typescript-eslint/parser`: Parses TypeScript code for ESLint.
 - `eslint-config-next`: Provides ESLint rules for Next.js projects.
 - `eslint-config-turbo`: Provides ESLint rules for Turbo projects.
-- `eslint-plugin-react`: Provides ESLint rules for React projects.
 - `eslint-plugin-security`: Provides ESLint rules for security vulnerabilities.
 - `eslint-config-prettier`: Disables ESLint rules that conflict with Prettier.
-- `eslint-plugin-deprecation`: Provides
+- `eslint-plugin-deprecation`: Provides ...
