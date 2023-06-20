@@ -4,11 +4,13 @@ on:
   push:
     branches:
       - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   release:
     permissions:
       contents: write
-      packages: write
     runs-on: ubuntu-latest
     outputs:
       release_id: ${{ steps.create-release.outputs.result }}
