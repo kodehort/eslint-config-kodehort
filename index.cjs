@@ -49,7 +49,7 @@ module.exports = {
       files: ["**/*.ts"],
       parser: "@typescript-eslint/parser",
       parserOptions: {
-        project: "./tsconfig.eslint.json",
+        project: "./tsconfig.json",
       },
       rules: {
         // These off-by-default rules work well for this repo and we like them on.

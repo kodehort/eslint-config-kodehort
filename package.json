@@ -1,5 +1,5 @@
 {
-  "name": "@kodehort/eslint-config-kodehort",
+  "name": "@kodehort/eslint-config",
   "version": "1.1.0",
   "description": "A curated set of ESLint configurations that we use across our projects and can be used in your projects.",
   "main": "index.cjs",

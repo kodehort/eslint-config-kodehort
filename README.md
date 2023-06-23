@@ -1,6 +1,6 @@
-# eslint-config-kodehort
+# eslint-config
 
-`eslint-config-kodehort` is a curated set of ESLint configurations that can be
+`eslint-config` is a curated set of ESLint configurations that can be
 across our projects and can be used in your projects. It includes a set of
 rules that are designed to help you write clean, maintainable, and error-free code.
 It is inspired by the config in [template-typescript-node-package](https://github.com/JoshuaKGoldberg/template-typescript-node-package)
@@ -16,26 +16,30 @@ enabling updates to be pulled forward into consuming projects.
 npm install eslint --save-dev
 ```
 
-2. Next, install `eslint-config-kodehort`, run the following command:
+2. Next, install `eslint-config`, run the following command:
 
 ```sh
-npm install --save-dev kodehort/eslint-config-kodehort
+npm install --save-dev kodehort/eslint-config
 ```
 
 Or:
 
 ```sh
-pnpm add kodehort/eslint-config-kodehort -D
+pnpm add kodehort/eslint-config -D
 ```
 
 ## Usage
 
-To use `eslint-config-kodehort`, you need to extend it in your ESLint
+To use `eslint-config`, you need to extend it in your ESLint
 configuration file. Here's an example `.eslintrc.json` file:
 
 ```json
 {
-  "extends": ["@kodehort/eslint-coonfig-kodehort"],
+  "extends": [
+    // ... other extends
+    "@kodehort/eslint-coonfig"
+    // ...
+  ],
   "rules": {
     // your custom rules here
   }
@@ -53,3 +57,4 @@ configuration file. Here's an example `.eslintrc.json` file:
 - `eslint-plugin-security`: Provides ESLint rules for security vulnerabilities.
 - `eslint-config-prettier`: Disables ESLint rules that conflict with Prettier.
 - `eslint-plugin-deprecation`: Provides ...
+- `eslint-plugin-vitest`: Provides ...
