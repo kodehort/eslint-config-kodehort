@@ -1,5 +1,11 @@
 # @kodehort/eslint-config-kodehort
 
+## 2.1.0
+
+### Minor Changes
+
+- 4d637dd: Remove ignore patterns from the shared config
+
 ## 2.0.0
 
 ### Major Changes
