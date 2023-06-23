@@ -115,7 +115,6 @@ module.exports = {
     "regexp",
     "vitest",
   ],
-  root: true,
   rules: {
     // These off/less-strict-by-default rules work well for this repo and we like them on.
     "import/extensions": ["error", "ignorePackages"],
