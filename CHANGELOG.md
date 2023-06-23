@@ -1,5 +1,11 @@
 # @kodehort/eslint-config-kodehort
 
+## 1.1.0
+
+### Minor Changes
+
+- e30b84d: vitest rules
+
 ## 1.0.1
 
 ### Patch Changes
