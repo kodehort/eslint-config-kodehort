@@ -35,7 +35,7 @@ configuration file. Here's an example `.eslintrc.json` file:
 
 ```json
 {
-  "extends": ["kodehort"],
+  "extends": ["@kodehort/eslint-coonfig-kodehort"],
   "rules": {
     // your custom rules here
   }
