@@ -10,9 +10,10 @@ module.exports = {
     "plugin:n/recommended",
     "plugin:perfectionist/recommended-natural",
     "plugin:regexp/recommended",
+    "plugin:security/recommended",
+    "plugin:vitest/recommended",
     "prettier",
     "turbo",
-    "plugin:security/recommended",
   ],
   /* eslint-disable perfectionist/sort-objects -- https://github.com/azat-io/eslint-plugin-perfectionist/issues/22 */
   overrides: [
@@ -114,7 +115,6 @@ module.exports = {
     "regexp",
     "vitest",
   ],
-  root: true,
   rules: {
     // These off/less-strict-by-default rules work well for this repo and we like them on.
     "import/extensions": ["error", "ignorePackages"],
