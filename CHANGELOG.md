@@ -1,5 +1,11 @@
 # @kodehort/eslint-config-kodehort
 
+## 2.1.1
+
+### Patch Changes
+
+- 6e028f5: Reduce rule strictness
+
 ## 2.1.0
 
 ### Minor Changes
