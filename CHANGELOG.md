@@ -1,5 +1,11 @@
 # @kodehort/eslint-config-kodehort
 
+## 2.0.0
+
+### Major Changes
+
+- 5d5fec1: Rename the module
+
 ## 1.1.0
 
 ### Minor Changes
