@@ -8,7 +8,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:eslint-comments/recommended",
     "plugin:n/recommended",
-    "plugin:perfectionist/recommended-natural",
+    "plugin:perfectionist/recommended-alphabetical",
     "plugin:regexp/recommended",
     "plugin:security/recommended",
     "plugin:vitest/recommended",
@@ -49,7 +49,7 @@ module.exports = {
       files: ["**/*.ts"],
       parser: "@typescript-eslint/parser",
       parserOptions: {
-        project: "./tsconfig.json",
+        project: "./tsconfig.eslint.json",
       },
       rules: {
         // These off-by-default rules work well for this repo and we like them on.
@@ -79,6 +79,12 @@ module.exports = {
         // These on-by-default rules aren't useful in test files.
         "@typescript-eslint/no-unsafe-assignment": "off",
         "@typescript-eslint/no-unsafe-call": "off",
+      },
+    },
+    {
+      files: "**/*.cjs",
+      rules: {
+        "import/no-commonjs": "off",
       },
     },
     {
@@ -117,16 +123,10 @@ module.exports = {
   ],
   rules: {
     // These off/less-strict-by-default rules work well for this repo and we like them on.
-    "import/extensions": ["error", "ignorePackages"],
-    "n/no-missing-import": [
-      "error",
-      {
-        allowModules: ["template-typescript-node-package"],
-      },
-    ],
     "no-only-tests/no-only-tests": "error",
 
     // These on-by-default rules don't work well for this repo and we like them off.
+    "n/no-missing-import": "off",
     "no-case-declarations": "off",
     "no-constant-condition": "off",
     "no-inner-declarations": "off",
@@ -140,10 +140,6 @@ module.exports = {
       },
     ],
     "@typescript-eslint/restrict-template-expressions": "off",
-    "@typescript-eslint/padding-line-between-statements": [
-      "error",
-      { blankLine: "always", next: "*", prev: "block-like" },
-    ],
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
