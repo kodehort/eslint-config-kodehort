@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 2.2.0
+
+### Minor Changes
+
+- 19763b7: Add ignore patterns for config files
+
 ## 2.1.1
 
 ### Patch Changes
