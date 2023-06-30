@@ -1,4 +1,4 @@
-# @kodehort/eslint-config-kodehort
+# @kodehort/eslint-config
 
 ## 2.1.0
 
