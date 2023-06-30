@@ -153,5 +153,13 @@ module.exports = {
       { prefer: "type-imports" },
     ],
   },
+  ignorePatterns: [
+    "**/*.config.js",
+    "**/*.config.cjs",
+    "**/*.config.mjs",
+    "**/*.config.ts",
+    "packages/**/**/**",
+  ],
+  reportUnusedDisableDirectives: true,
   /* eslint-enable perfectionist/sort-objects */
 };
