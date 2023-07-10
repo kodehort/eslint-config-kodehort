@@ -31,16 +31,25 @@ pnpm add kodehort/eslint-config -D
 ## Usage
 
 To use `eslint-config`, you need to extend it in your ESLint
-configuration file. Here's an example `.eslintrc.json` file:
+configuration file. Here's an example `.eslintrc.cjs` file:
 
-```json
+```javascript
 {
-  "extends": [
+  extends: [
     // ... other extends
     "@kodehort/eslint-coonfig"
     // ...
   ],
-  "rules": {
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: [
+      './tsconfig.eslint.json',
+      './packages/*/tsconfig.json',
+      './docs/tsconfig.json',
+    ],
+  },
+  root: true,
+  rules: {
     // your custom rules here
   }
 }
