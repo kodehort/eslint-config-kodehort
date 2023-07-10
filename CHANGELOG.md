@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 2.2.1
+
+### Patch Changes
+
+- 5668f5d: Update glob patterns
+
 ## 2.2.0
 
 ### Minor Changes
