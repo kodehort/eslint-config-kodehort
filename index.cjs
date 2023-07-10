@@ -39,6 +39,7 @@ module.exports = {
         "jsdoc/require-property": "off",
         "jsdoc/require-returns": "off",
         "perfectionist/sort-named-imports": "off",
+        "perfectionist/sort-imports": "off",
       },
     },
     {
