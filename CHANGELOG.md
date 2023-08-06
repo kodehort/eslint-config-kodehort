@@ -1,5 +1,12 @@
 # @kodehort/eslint-config
 
+## 2.2.2
+
+### Patch Changes
+
+- 54f54b5: Remove n/no-unpublished-import for test files
+- 553223c: chore(deps): bump word-wrap from 1.2.3 to 1.2.4
+
 ## 2.2.1
 
 ### Patch Changes
