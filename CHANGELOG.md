@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 2.2.3
+
+### Patch Changes
+
+- 3e53a67: update deps
+
 ## 2.2.2
 
 ### Patch Changes
