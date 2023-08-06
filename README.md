@@ -16,16 +16,16 @@ enabling updates to be pulled forward into consuming projects.
 npm install eslint --save-dev
 ```
 
-2. Next, install `eslint-config`, run the following command:
+2. Next, install `@kodehort/eslint-config`, run the following command:
 
 ```sh
-npm install --save-dev kodehort/eslint-config
+npm install --save-dev @kodehort/eslint-config
 ```
 
 Or:
 
 ```sh
-pnpm add kodehort/eslint-config -D
+pnpm add @kodehort/eslint-config -D
 ```
 
 ## Usage
@@ -54,16 +54,3 @@ configuration file. Here's an example `.eslintrc.cjs` file:
   }
 }
 ```
-
-## Included Packages
-
-`eslint-config-kodehort` includes the following packages:
-
-- `@typescript-eslint/eslint-plugin`: Provides ESLint rules specific to TypeScript.
-- `@typescript-eslint/parser`: Parses TypeScript code for ESLint.
-- `eslint-config-next`: Provides ESLint rules for Next.js projects.
-- `eslint-config-turbo`: Provides ESLint rules for Turbo projects.
-- `eslint-plugin-security`: Provides ESLint rules for security vulnerabilities.
-- `eslint-config-prettier`: Disables ESLint rules that conflict with Prettier.
-- `eslint-plugin-deprecation`: Provides ...
-- `eslint-plugin-vitest`: Provides ...

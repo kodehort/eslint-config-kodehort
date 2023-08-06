@@ -15,7 +15,6 @@ module.exports = {
     "prettier",
     "turbo",
   ],
-  /* eslint-disable perfectionist/sort-objects -- https://github.com/azat-io/eslint-plugin-perfectionist/issues/22 */
   overrides: [
     {
       extends: ["plugin:markdown/recommended"],
@@ -30,10 +29,7 @@ module.exports = {
       files: ["*.ts"],
       parser: "@typescript-eslint/parser",
       rules: {
-        // These off-by-default rules work well for this repo and we like them on.
         "jsdoc/informative-docs": "error",
-
-        // These on-by-default rules don't work well for this repo and we like them off.
         "jsdoc/require-jsdoc": "off",
         "jsdoc/require-param": "off",
         "jsdoc/require-property": "off",
@@ -51,10 +47,7 @@ module.exports = {
       files: ["*.ts"],
       parser: "@typescript-eslint/parser",
       rules: {
-        // These off-by-default rules work well for this repo and we like them on.
         "deprecation/deprecation": "error",
-
-        // These more-strict-by-default rules don't work well for this repo and we like them less strict.
         "@typescript-eslint/no-unnecessary-condition": [
           "error",
           {
@@ -73,11 +66,12 @@ module.exports = {
       },
     },
     {
-      files: "*.test.ts",
+      files: ["*.test.{ts,tsx}"],
       rules: {
         // These on-by-default rules aren't useful in test files.
         "@typescript-eslint/no-unsafe-assignment": "off",
         "@typescript-eslint/no-unsafe-call": "off",
+        "n/no-unpublished-import": "off",
       },
     },
     {
@@ -121,16 +115,11 @@ module.exports = {
     "vitest",
   ],
   rules: {
-    // These off/less-strict-by-default rules work well for this repo and we like them on.
     "no-only-tests/no-only-tests": "error",
-
-    // These on-by-default rules don't work well for this repo and we like them off.
     "n/no-missing-import": "off",
     "no-case-declarations": "off",
     "no-constant-condition": "off",
     "no-inner-declarations": "off",
-
-    // Stylistic concerns that don't interfere with Prettier
     "padding-line-between-statements": "off",
     "@typescript-eslint/no-misused-promises": [
       "error",
@@ -152,13 +141,6 @@ module.exports = {
       { prefer: "type-imports" },
     ],
   },
-  ignorePatterns: [
-    "**/*.config.js",
-    "**/*.config.cjs",
-    "**/*.config.mjs",
-    "**/*.config.ts",
-    "packages/**/**/**",
-  ],
   reportUnusedDisableDirectives: true,
   /* eslint-enable perfectionist/sort-objects */
 };
