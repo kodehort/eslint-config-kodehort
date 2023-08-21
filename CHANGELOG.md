@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 2.2.4
+
+### Patch Changes
+
+- 0f96d97: Add astro config
+
 ## 2.2.3
 
 ### Patch Changes
