@@ -6,6 +6,7 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
+    "plugin:astro/recommended",
     "plugin:eslint-comments/recommended",
     "plugin:n/recommended",
     "plugin:perfectionist/recommended-alphabetical",
@@ -16,6 +17,22 @@ module.exports = {
     "turbo",
   ],
   overrides: [
+    {
+      // Define the configuration for `.astro` file.
+      files: ["*.astro"],
+      // Allows Astro components to be parsed.
+      parser: "astro-eslint-parser",
+      // Parse the script in `.astro` as TypeScript by adding the following configuration.
+      // It's the setting you need when using TypeScript.
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+        extraFileExtensions: [".astro"],
+      },
+      rules: {
+        // override/add rules settings here, such as:
+        // "astro/no-set-html-directive": "error"
+      },
+    },
     {
       extends: ["plugin:markdown/recommended"],
       files: ["*.md"],
