@@ -1,7 +1,7 @@
 # eslint-config
 
-`eslint-config` is a curated set of ESLint configurations that can be
-across our projects and can be used in your projects. It includes a set of
+`eslint-config` is a curated set of ESLint configurations that are used 
+across our projects and can be used in your projects too. It includes a set of
 rules that are designed to help you write clean, maintainable, and error-free code.
 It is inspired by the config in [template-typescript-node-package](https://github.com/JoshuaKGoldberg/template-typescript-node-package)
 but with further customisation and intended to be included as a dependency across
