@@ -44,8 +44,6 @@ configuration file. Here's an example `.eslintrc.cjs` file:
     tsconfigRootDir: __dirname,
     project: [
       './tsconfig.eslint.json',
-      './packages/*/tsconfig.json',
-      './docs/tsconfig.json',
     ],
   },
   root: true,
