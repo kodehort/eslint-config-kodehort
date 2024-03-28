@@ -1,5 +1,12 @@
 # @kodehort/eslint-config
 
+## 2.2.6
+
+### Patch Changes
+
+- f5872d9: fix(deps): update dependency eslint-plugin-jsx-a11y to v6.8.0
+- 39659d5: fix(deps): update dependency eslint-plugin-jsonc to v2.14.1
+
 ## 2.2.5
 
 ### Patch Changes
