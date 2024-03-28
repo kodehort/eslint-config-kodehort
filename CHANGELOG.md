@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 3.0.1
+
+### Patch Changes
+
+- 69165e2: fix(deps): update dependency eslint-plugin-jsx-a11y to v6.8.0
+
 ## 3.0.0
 
 ### Major Changes
