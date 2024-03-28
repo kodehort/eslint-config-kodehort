@@ -1,6 +1,6 @@
 # eslint-config
 
-`eslint-config` is a curated set of ESLint configurations that are used 
+`eslint-config` is a curated set of ESLint configurations that are used
 across our projects and can be used in your projects too. It includes a set of
 rules that are designed to help you write clean, maintainable, and error-free code.
 It is inspired by the config in [template-typescript-node-package](https://github.com/JoshuaKGoldberg/template-typescript-node-package)
@@ -10,22 +10,8 @@ enabling updates to be pulled forward into consuming projects.
 
 ## Installation
 
-1. You'll first need to install [ESLint](https://eslint.org/):
-
 ```sh
-npm install eslint --save-dev
-```
-
-2. Next, install `@kodehort/eslint-config`, run the following command:
-
-```sh
-npm install --save-dev @kodehort/eslint-config
-```
-
-Or:
-
-```sh
-pnpm add @kodehort/eslint-config -D
+pnpm install eslint -D
 ```
 
 ## Usage
@@ -33,22 +19,39 @@ pnpm add @kodehort/eslint-config -D
 To use `eslint-config`, you need to extend it in your ESLint
 configuration file. Here's an example `.eslintrc.cjs` file:
 
-```javascript
-{
+```javascript .eslintrc.cjs
+/** @type {import("eslint").Linter.Config} */
+module.exports = {
   extends: [
     // ... other extends
-    "@kodehort/eslint-coonfig"
+    "@kodehort/eslint-coonfig",
     // ...
   ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    tsconfigRootDir: __dirname,
-    project: [
-      './tsconfig.eslint.json',
-    ],
+    project: true,
   },
-  root: true,
   rules: {
     // your custom rules here
-  }
-}
+  },
+};
+```
+
+```javascript .eslintrc.cjs
+/** @type {import("eslint").Linter.Config} */
+module.exports = {
+  extends: [
+    // ... other extends
+    "@kodehort/eslint-coonfig/astro.cjs",
+    "@kodehort/eslint-coonfig/solid.cjs",
+    // ...
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: true,
+  },
+  rules: {
+    // your custom rules here
+  },
+};
 ```
