@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 3.0.0
+
+### Major Changes
+
+- 3b0cdd7: Restructure the config and break into modular tech specfic config
+
 ## 2.2.6
 
 ### Patch Changes
