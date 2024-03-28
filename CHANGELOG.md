@@ -1,5 +1,13 @@
 # @kodehort/eslint-config
 
+## 2.2.5
+
+### Patch Changes
+
+- 8f78393: fix(deps): update dependency eslint-config-prettier to v9.1.0
+- 8d0969d: fix(deps): update dependency eslint-plugin-import to v2.29.1
+- 25a8f75: refactor(release.yaml): modify permissions and downgrade action
+
 ## 2.2.4
 
 ### Patch Changes
