@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 4.0.0
+
+### Major Changes
+
+- 8cdc8eb: Rewite to flat config
+
 ## 3.0.1
 
 ### Patch Changes
