@@ -1,3 +1,4 @@
 .changeset
 .github
 .pnpm-lock.yaml
+__eslintTests__
