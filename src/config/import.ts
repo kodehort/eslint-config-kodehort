@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access */
 import pluginImport from "eslint-plugin-i";
 import { defineConfig } from "../util/define-config.js";
 

@@ -1,37 +1,25 @@
-import { readdir, readFile } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import { glob } from "glob";
 
-export const inferPackageTypes = async (
-  packagesDirs: Array<string>,
-): Promise<PackageTypes> => {
+export const inferPackageTypes = async (): Promise<PackageTypes> => {
   const packageTypes: PackageTypes = {
     browserPackages: [],
     nodePackages: [],
   };
-  for (const packagesDir of packagesDirs) {
-    for (const packageDir of await listPackages(packagesDir)) {
-      const packagePath = `${packagesDir}/${packageDir}`;
-      const packageType = await inferPackageType(packagePath);
-      packageTypes[packageType].push(packagePath);
-    }
+  const packageFiles = await glob("**/package.json", {
+    ignore: "node_modules/**",
+  });
+  for (const packageFile of packageFiles) {
+    const packagePath = path.dirname(packageFile);
+    const packageType = await inferPackageType(packageFile);
+    packageTypes[packageType].push(packagePath);
   }
   return packageTypes;
 };
 
-const listPackages = async (packagesDir: string): Promise<Array<string>> => {
-  const packages: Array<string> = [];
-  try {
-    for (const entry of await readdir(packagesDir, { withFileTypes: true })) {
-      if (!entry.isDirectory()) continue;
-      packages.push(entry.name);
-    }
-  } catch (e) {
-    console.log(e);
-  }
-  return packages;
-};
-
 const inferPackageType = async (packagePath: string): Promise<PackageType> => {
-  const content = await readFile(`${packagePath}/package.json`, "utf8");
+  const content = await readFile(packagePath, "utf8");
   const pkg = JSON.parse(content) as PackageJson;
   return containsDependencies(pkg, "solid-js") ||
     containsDependencies(pkg, "astro")

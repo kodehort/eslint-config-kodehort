@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@types/luxon": "^3.4.2",
+    "luxon": "^3.4.4",
+    "solid-js": "^1.8.16"
+  },
+  "description": "",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@apps/test",
+  "version": "1.0.0"
+}

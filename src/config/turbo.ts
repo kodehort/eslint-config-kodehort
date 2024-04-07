@@ -1,11 +1,9 @@
-import { FlatCompat } from "@eslint/eslintrc";
 import { defineConfig } from "../util/define-config.js";
-
-const compat = new FlatCompat({});
+import turboPlugin from "eslint-plugin-turbo";
 
 export const turbo = defineConfig([
   {
-    // @ts-ignore
-    ...compat.extends["turbo"],
+    plugins: { turbo: turboPlugin },
+    rules: turboPlugin.configs.recommended.rules,
   },
 ]);

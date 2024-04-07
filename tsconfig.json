@@ -2,16 +2,6 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "strict": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "exactOptionalPropertyTypes": false,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "isolatedModules": true,
     "checkJs": true,
     "esModuleInterop": true,
@@ -25,5 +15,6 @@
     "declarationMap": true,
     "outDir": "./dist"
   },
+  "include": ["src"],
   "exclude": ["dist", "node_modules"]
 }

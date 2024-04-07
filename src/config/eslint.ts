@@ -12,6 +12,18 @@ export const eslint = defineConfig([
         { VariableDeclarator: { object: true } },
         { enforceForRenamedProperties: false },
       ],
+      "no-restricted-imports": [
+        "error",
+        {
+          paths: [
+            {
+              name: "luxon",
+              message: "Please avoid using Luxon in favor of js-joda/core",
+            },
+          ],
+          patterns: ["luxon"],
+        },
+      ],
     },
   },
 ]);

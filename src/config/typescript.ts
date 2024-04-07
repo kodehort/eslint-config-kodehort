@@ -7,7 +7,7 @@ export const typescript = defineConfig([
     languageOptions: {
       parser: typescriptEslintParser,
       parserOptions: {
-        project: true,
+        project: false,
         sourceType: "module",
       },
     },

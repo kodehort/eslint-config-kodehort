@@ -16,12 +16,10 @@ import { jsdoc } from "./config/jsdoc.js";
 import { yaml } from "./config/yaml.js";
 import { regex } from "./config/regex.js";
 import { json } from "./config/json.js";
+import { unicorn } from "./config/unicorn.js";
 
 const rootFiles = ["*.js", "*.cjs", "*.mjs", "*.ts"];
-const { browserPackages, nodePackages } = await inferPackageTypes([
-  "apps",
-  "packages",
-]);
+const { browserPackages, nodePackages } = await inferPackageTypes();
 const browserFiles = browserPackages.map((dir) => `${dir}/**/*.{ts,tsx}`);
 const nodeFiles = nodePackages.map((dir) => `${dir}/**/*.ts`);
 const astroFiles = browserPackages.map((dir) => `${dir}/**/*.{astro}`);
@@ -41,44 +39,17 @@ export const baseConfig = [
   ...browser({ files: [...browserFiles] }),
   ...node({ files: [...rootFiles, ...nodeFiles] }),
   ...eslint({ files: allFiles }),
-  ...typescript({ files: allFiles }),
+  // ...typescript({ files: allFiles }),
   ...astro({ files: astroFiles }),
   ...security({ files: allFiles }),
   ...vitest({ files: testFiles }),
   ...perfectionist({ files: allFiles }),
+  ...unicorn({ files: allFiles }),
   ...jsdoc({ files: allFiles }),
   ...json(),
   ...yaml(),
   ...regex(),
   ...onlyWarn(),
-  ...turbo(),
+  ...turbo({ files: allFiles }),
   ...prettierThisMustBePutLast(),
 ] satisfies Linter.Config[];
-
-// module.exports = {
-//   extends: [
-//     "plugin:regexp/recommended",
-//   ],
-//   overrides: [
-//     { files: ["*.?(c)js?(x)", "*.ts?(x)"] },
-//     {
-//       extends: ["plugin:markdown/recommended"],
-//       files: ["*.md"],
-//       processor: "markdown/markdown",
-//     },
-//     {
-//       excludedFiles: ["package.json"],
-//       extends: ["plugin:jsonc/recommended-with-json"],
-//       files: ["*.json?(c)"],
-//       parser: "jsonc-eslint-parser",
-//       rules: {
-//         "jsonc/sort-keys": "error",
-//       },
-//     },
-//   ],
-//   plugins: [
-//     "import",
-//     "regexp",
-//   ],
-//   reportUnusedDisableDirectives: true,
-// };

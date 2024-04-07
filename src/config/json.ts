@@ -3,11 +3,12 @@ import jsoncParser from "jsonc-eslint-parser";
 import { defineConfig } from "../util/define-config.js";
 
 export const json = defineConfig([
+  ...eslintPluginJsonc.configs["flat/recommended-with-jsonc"],
   {
-    ...eslintPluginJsonc.configs["flat/all"],
-    files: ["*.json", "*.json5"], // Specify the extension or pattern you want to parse as JSON.
+    files: ["*.json", "*.json5"],
+    ignores: ["package.json"],
     languageOptions: {
-      parser: jsoncParser, // Set this parser.
+      parser: jsoncParser,
     },
     plugins: {
       json: eslintPluginJsonc as any,

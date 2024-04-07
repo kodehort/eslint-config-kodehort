@@ -3,9 +3,9 @@ import yamlParser from "yaml-eslint-parser";
 import { defineConfig } from "../util/define-config.js";
 
 export const yaml = defineConfig([
+  ...eslintPluginYml.configs["flat/standard"],
+  ...eslintPluginYml.configs["flat/prettier"],
   {
-    ...eslintPluginYml.configs["flat/standard"],
-    ...eslintPluginYml.configs["flat/prettier"],
     files: ["*.yaml", "*.yml"],
     languageOptions: {
       parser: yamlParser,
