@@ -1,31 +1,32 @@
-import eslintPluginYml from "eslint-plugin-yml";
-import yamlParser from "yaml-eslint-parser";
-import { defineConfig } from "../util/define-config.js";
+import eslintPluginYml from 'eslint-plugin-yml'
+import yamlParser from 'yaml-eslint-parser'
+
+import { defineConfig } from '../util/define-config.js'
 
 export const yaml = defineConfig([
-  ...eslintPluginYml.configs["flat/standard"],
-  ...eslintPluginYml.configs["flat/prettier"],
+  ...eslintPluginYml.configs['flat/standard'],
+  ...eslintPluginYml.configs['flat/prettier'],
   {
-    files: ["*.yaml", "*.yml"],
+    files: ['*.yaml', '*.yml'],
     languageOptions: {
       parser: yamlParser,
     },
     rules: {
-      "yml/file-extension": ["error", { extension: "yml" }],
-      "yml/sort-keys": [
-        "error",
+      'yml/file-extension': ['error', { extension: 'yaml' }],
+      'yml/sort-keys': [
+        'error',
         {
-          order: { type: "asc" },
-          pathPattern: "^.*$",
+          order: { type: 'asc' },
+          pathPattern: '^.*$',
         },
       ],
-      "yml/sort-sequence-values": [
-        "error",
+      'yml/sort-sequence-values': [
+        'error',
         {
-          order: { type: "asc" },
-          pathPattern: "^.*$",
+          order: { type: 'asc' },
+          pathPattern: '^.*$',
         },
       ],
     },
   },
-]);
+])

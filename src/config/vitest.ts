@@ -1,6 +1,6 @@
-import vitestPlugin from "eslint-plugin-vitest";
+import vitestPlugin from 'eslint-plugin-vitest'
 
-import { defineConfig } from "../util/define-config.js";
+import { defineConfig } from '../util/define-config.js'
 
 export const vitest = defineConfig([
   {
@@ -21,4 +21,4 @@ export const vitest = defineConfig([
       },
     },
   },
-]);
+])

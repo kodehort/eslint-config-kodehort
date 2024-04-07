@@ -1,5 +1,6 @@
-import globals from "globals";
-import { defineConfig } from "../util/define-config.js";
+import globals from 'globals'
+
+import { defineConfig } from '../util/define-config.js'
 
 export const browser = defineConfig([
   {
@@ -11,4 +12,4 @@ export const browser = defineConfig([
       },
     },
   },
-]);
+])

@@ -1,6 +1,7 @@
-const config = {
-  // @ts-ignore
-  ...require("@kodehort/prettier-config"),
+import prettierConfig from "@kodehort/prettier-config";
+
+export default {
+  ...prettierConfig,
   importOrder: [
     "<BUILTIN_MODULES>",
     "",
@@ -17,4 +18,3 @@ const config = {
   importOrderTypeScriptVersion: "5.1.6",
 };
 
-module.exports = config;

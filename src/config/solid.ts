@@ -1,13 +1,13 @@
-import * as tsParser from "@typescript-eslint/parser";
-import solidPlugin from "eslint-plugin-solid";
+import * as tsParser from '@typescript-eslint/parser'
+import solidPlugin from 'eslint-plugin-solid';
+
+import { defineConfig } from '../util/define-config.js'
 
 export const solidConfig = {
-  files: ["*.{ts,tsx}"],
-  ...solidPlugin.configs.typescript,
-  languageOptions: {
-    parser: tsParser,
-    parserOptions: {
-      project: "tsconfig.json",
-    },
-  },
-};
+  plugins: { solid: solidPlugin },
+  rules: solidPlugin.configs.typescript.rules,
+}
+
+export const solid = defineConfig([
+  solidConfig,
+])
