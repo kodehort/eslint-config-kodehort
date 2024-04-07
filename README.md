@@ -7,7 +7,7 @@ that are designed to help you write clean, maintainable, and error-free code.
 ## Installation
 
 ```sh
-pnpm install eslint -D
+pnpm install eslint @kodehort/eslint-config -D
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ To use `eslint-config`, you need to extend it in your ESLint configuration file.
 Here's an example `.eslintrc.cjs` file:
 
 ```javascript eslint.config.js
-import { baseConfig } from '@kodehort/eslint-coonfig'
+import { baseConfig } from '@kodehort/eslint-config'
 
 export default [
   // ... other flatConfig
