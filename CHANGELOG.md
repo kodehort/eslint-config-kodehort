@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 4.0.1
+
+### Patch Changes
+
+- 1cb38ae: Update config and documentation
+
 ## 4.0.0
 
 ### Major Changes
