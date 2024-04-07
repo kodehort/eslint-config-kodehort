@@ -21,6 +21,17 @@ import { baseConfig } from '@kodehort/eslint-config'
 export default [
   // ... other flatConfig
   ...baseConfig,
+  // project specific config
+  {
+    languageOptions: {
+      parserOptions: {
+        project: [
+          './tsconfig.json',
+          './tsconfig.eslint.json',
+        ],
+      },
+    }
+  },
   // ...
 ]
 ```

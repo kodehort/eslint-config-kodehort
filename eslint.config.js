@@ -1,3 +1,12 @@
 import { baseConfig } from './dist/index.js'
 
-export default [...baseConfig]
+export default [...baseConfig, {
+  languageOptions: {
+    parserOptions: {
+      project: [
+        './tsconfig.json',
+        './tsconfig.eslint.json',
+      ],
+    },
+  }
+}]
