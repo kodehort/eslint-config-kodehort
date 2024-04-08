@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 4.1.0
+
+### Minor Changes
+
+- 0aa2443: Introduce arrow-function rules
+
 ## 4.0.1
 
 ### Patch Changes
