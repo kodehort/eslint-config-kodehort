@@ -8,6 +8,7 @@ declare module 'eslint-plugin-n'
 declare module 'eslint-plugin-regexp'
 declare module 'eslint-plugin-solid'
 declare module 'eslint-plugin-turbo'
+declare module 'eslint-plugin-prefer-arrow-functions'
 declare module 'eslint-config-prettier' {
   import { type RulesRecord } from 'eslint'
   const rules: RulesRecord

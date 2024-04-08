@@ -21,6 +21,7 @@ import { inferPackageTypes } from './util/infer-package-type.js'
 import { unignore } from './util/unignore.js'
 import { imports } from './config/import.js'
 import { comment } from './config/no-commented-code.js'
+import { arrowFunctions } from './config/arrow-functions.js'
 
 const rootFiles = ['*.js', '*.cjs', '*.mjs', '*.ts']
 const { browserPackages, nodePackages } = await inferPackageTypes()
@@ -58,6 +59,7 @@ export const baseConfig : Linter.FlatConfig[] = [
   ...jsdoc({ files: allFiles }),
   ...imports({ files: allFiles }),
   ...comment({ files: allFiles }),
+  ...arrowFunctions({ files: allFiles }),
   ...json(),
   ...yaml(),
   ...regex(),

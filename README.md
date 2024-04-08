@@ -35,3 +35,10 @@ export default [
   // ...
 ]
 ```
+
+## Package discovery and file resolution
+
+The config will search for package.json files in the current or child folders.
+Each packjage.json file will be used to define a path for the eslint rules. The
+content of the file will be used to infer the project type and setup the
+appropriate eslint rules.
