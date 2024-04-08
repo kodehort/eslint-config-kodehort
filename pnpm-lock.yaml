@@ -4,137 +4,123 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-importers:
+dependencies:
+  '@eslint/eslintrc':
+    specifier: ^3.0.2
+    version: 3.0.2
+  '@eslint/js':
+    specifier: ^8.57.0
+    version: 8.57.0
+  '@types/eslint':
+    specifier: ^8.56.7
+    version: 8.56.7
+  '@typescript-eslint/eslint-plugin':
+    specifier: ^7.5.0
+    version: 7.5.0(@typescript-eslint/parser@7.5.0)(eslint@8.57.0)(typescript@5.4.4)
+  '@typescript-eslint/parser':
+    specifier: ^7.5.0
+    version: 7.5.0(eslint@8.57.0)(typescript@5.4.4)
+  eslint:
+    specifier: ^8.57.0
+    version: 8.57.0
+  eslint-config-prettier:
+    specifier: ^9.1.0
+    version: 9.1.0(eslint@8.57.0)
+  eslint-config-turbo:
+    specifier: ^1.13.2
+    version: 1.13.2(eslint@8.57.0)
+  eslint-plugin-astro:
+    specifier: ^0.34.0
+    version: 0.34.0(eslint@8.57.0)(typescript@5.4.4)
+  eslint-plugin-eslint-comments:
+    specifier: ^3.2.0
+    version: 3.2.0(eslint@8.57.0)
+  eslint-plugin-jsdoc:
+    specifier: ^48.2.3
+    version: 48.2.3(eslint@8.57.0)
+  eslint-plugin-jsonc:
+    specifier: ^2.15.0
+    version: 2.15.0(eslint@8.57.0)
+  eslint-plugin-n:
+    specifier: ^16.0.1
+    version: 16.6.2(eslint@8.57.0)
+  eslint-plugin-no-commented-code:
+    specifier: ^1.0.10
+    version: 1.0.10
+  eslint-plugin-only-warn:
+    specifier: ^1.1.0
+    version: 1.1.0
+  eslint-plugin-perfectionist:
+    specifier: ^2.8.0
+    version: 2.8.0(eslint@8.57.0)(typescript@5.4.4)
+  eslint-plugin-prefer-arrow-functions:
+    specifier: ^3.3.2
+    version: 3.3.2(eslint@8.57.0)
+  eslint-plugin-prettier:
+    specifier: ^5.1.3
+    version: 5.1.3(@types/eslint@8.56.7)(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
+  eslint-plugin-regexp:
+    specifier: ^2.4.0
+    version: 2.5.0(eslint@8.57.0)
+  eslint-plugin-security:
+    specifier: ^2.0.0
+    version: 2.1.1
+  eslint-plugin-simple-import-sort:
+    specifier: ^12.0.0
+    version: 12.0.0(eslint@8.57.0)
+  eslint-plugin-solid:
+    specifier: ^0.13.2
+    version: 0.13.2(eslint@8.57.0)(typescript@5.4.4)
+  eslint-plugin-unicorn:
+    specifier: ^52.0.0
+    version: 52.0.0(eslint@8.57.0)
+  eslint-plugin-vitest:
+    specifier: ^0.4.1
+    version: 0.4.1(@typescript-eslint/eslint-plugin@7.5.0)(eslint@8.57.0)(typescript@5.4.4)
+  eslint-plugin-yml:
+    specifier: ^1.14.0
+    version: 1.14.0(eslint@8.57.0)
+  glob:
+    specifier: ^10.3.12
+    version: 10.3.12
+  globals:
+    specifier: ^15.0.0
+    version: 15.0.0
+  jsonc-eslint-parser:
+    specifier: ^2.4.0
+    version: 2.4.0
+  typescript:
+    specifier: ^5.4.4
+    version: 5.4.4
+  typescript-eslint:
+    specifier: ^7.5.0
+    version: 7.5.0(eslint@8.57.0)(typescript@5.4.4)
+  yaml-eslint-parser:
+    specifier: ^1.2.2
+    version: 1.2.2
 
-  .:
-    dependencies:
-      '@eslint/eslintrc':
-        specifier: ^3.0.2
-        version: 3.0.2
-      '@eslint/js':
-        specifier: ^8.57.0
-        version: 8.57.0
-      '@types/eslint':
-        specifier: ^8.56.7
-        version: 8.56.7
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^7.5.0
-        version: 7.5.0(@typescript-eslint/parser@7.5.0)(eslint@8.57.0)(typescript@5.4.4)
-      '@typescript-eslint/parser':
-        specifier: ^7.5.0
-        version: 7.5.0(eslint@8.57.0)(typescript@5.4.4)
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.57.0)
-      eslint-config-turbo:
-        specifier: ^1.13.2
-        version: 1.13.2(eslint@8.57.0)
-      eslint-plugin-astro:
-        specifier: ^0.34.0
-        version: 0.34.0(eslint@8.57.0)(typescript@5.4.4)
-      eslint-plugin-eslint-comments:
-        specifier: ^3.2.0
-        version: 3.2.0(eslint@8.57.0)
-      eslint-plugin-jsdoc:
-        specifier: ^48.2.3
-        version: 48.2.3(eslint@8.57.0)
-      eslint-plugin-jsonc:
-        specifier: ^2.15.0
-        version: 2.15.0(eslint@8.57.0)
-      eslint-plugin-n:
-        specifier: ^16.0.1
-        version: 16.6.2(eslint@8.57.0)
-      eslint-plugin-no-commented-code:
-        specifier: ^1.0.10
-        version: 1.0.10
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
-      eslint-plugin-perfectionist:
-        specifier: ^2.8.0
-        version: 2.8.0(eslint@8.57.0)(typescript@5.4.4)
-      eslint-plugin-prefer-arrow-functions:
-        specifier: ^3.3.2
-        version: 3.3.2(eslint@8.57.0)
-      eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(@types/eslint@8.56.7)(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
-      eslint-plugin-regexp:
-        specifier: ^2.4.0
-        version: 2.4.0(eslint@8.57.0)
-      eslint-plugin-security:
-        specifier: ^2.0.0
-        version: 2.1.1
-      eslint-plugin-simple-import-sort:
-        specifier: ^12.0.0
-        version: 12.0.0(eslint@8.57.0)
-      eslint-plugin-solid:
-        specifier: ^0.13.2
-        version: 0.13.2(eslint@8.57.0)(typescript@5.4.4)
-      eslint-plugin-unicorn:
-        specifier: ^52.0.0
-        version: 52.0.0(eslint@8.57.0)
-      eslint-plugin-vitest:
-        specifier: ^0.4.1
-        version: 0.4.1(@typescript-eslint/eslint-plugin@7.5.0)(eslint@8.57.0)(typescript@5.4.4)
-      eslint-plugin-yml:
-        specifier: ^1.14.0
-        version: 1.14.0(eslint@8.57.0)
-      glob:
-        specifier: ^10.3.12
-        version: 10.3.12
-      globals:
-        specifier: ^15.0.0
-        version: 15.0.0
-      jsonc-eslint-parser:
-        specifier: ^2.4.0
-        version: 2.4.0
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-      typescript-eslint:
-        specifier: ^7.5.0
-        version: 7.5.0(eslint@8.57.0)(typescript@5.4.4)
-      yaml-eslint-parser:
-        specifier: ^1.2.2
-        version: 1.2.2
-    devDependencies:
-      '@changesets/cli':
-        specifier: ^2.26.2
-        version: 2.27.1
-      '@kodehort/prettier-config':
-        specifier: ^2.0.4
-        version: 2.0.4(prettier@3.2.5)
-      '@tsconfig/node16':
-        specifier: ^16.1.3
-        version: 16.1.3
-      '@types/eslint__eslintrc':
-        specifier: ^2.1.1
-        version: 2.1.1
-      '@types/eslint__js':
-        specifier: ^8.42.3
-        version: 8.42.3
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      prettier:
-        specifier: ^3.2.5
-        version: 3.2.5
-
-  __eslintTests__/apps/test:
-    dependencies:
-      '@types/luxon':
-        specifier: ^3.4.2
-        version: 3.4.2
-      luxon:
-        specifier: ^3.4.4
-        version: 3.4.4
-      solid-js:
-        specifier: ^1.8.16
-        version: 1.8.16
+devDependencies:
+  '@changesets/cli':
+    specifier: ^2.26.2
+    version: 2.27.1
+  '@kodehort/prettier-config':
+    specifier: ^2.0.4
+    version: 2.0.4(prettier@3.2.5)
+  '@tsconfig/node16':
+    specifier: ^16.1.3
+    version: 16.1.3
+  '@types/eslint__eslintrc':
+    specifier: ^2.1.1
+    version: 2.1.1
+  '@types/eslint__js':
+    specifier: ^8.42.3
+    version: 8.42.3
+  '@types/node':
+    specifier: ^20.12.5
+    version: 20.12.5
+  prettier:
+    specifier: ^3.2.5
+    version: 3.2.5
 
 packages:
 
@@ -788,10 +774,6 @@ packages:
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  /@types/luxon@3.4.2:
-    resolution: {integrity: sha512-TifLZlFudklWlMBfhubvgqTXRzLDI5pCbGa4P8a3wPyUQSW+1xQ5eDsreP9DWHX3tjq1ke96uYG/nwundroWcA==}
-    dev: false
-
   /@types/minimist@1.2.5:
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
     dev: true
@@ -1407,10 +1389,6 @@ packages:
     hasBin: true
     dev: false
 
-  /csstype@3.1.3:
-    resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
-    dev: false
-
   /csv-generate@3.4.3:
     resolution: {integrity: sha512-w/T+rqR0vwvHqWs/1ZyMDWtHHSJaN06klRqJXBEpDJaM/+dZkso0OKh1VcuuYvK3XM53KysVNq8Ko/epCK8wOw==}
     dev: true
@@ -1878,8 +1856,8 @@ packages:
       synckit: 0.8.8
     dev: false
 
-  /eslint-plugin-regexp@2.4.0(eslint@8.57.0):
-    resolution: {integrity: sha512-OL2S6VPjQhs9s/NclQ0qattVq1J0GU8ox70/HIVy5Dxw+qbbdd7KQkyucsez2clEQjvdtDe12DTnPphFFUyXFg==}
+  /eslint-plugin-regexp@2.5.0(eslint@8.57.0):
+    resolution: {integrity: sha512-I7vKcP0o75WS5SHiVNXN+Eshq49sbrweMQIuqSL3AId9AwDe9Dhbfug65vw64LxmOd4v+yf5l5Xt41y9puiq0g==}
     engines: {node: ^18 || >=20}
     peerDependencies:
       eslint: '>=8.44.0'
@@ -2864,11 +2842,6 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /luxon@3.4.4:
-    resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
-    engines: {node: '>=12'}
-    dev: false
-
   /map-obj@1.0.1:
     resolution: {integrity: sha512-7N/q3lyZ+LVCp7PzuxrJr4KMbBE2hW7BT7YNia330OFxIf4d3r5zVpicP2650l7CPN6RM9zOJRl3NGpqSiw3Eg==}
     engines: {node: '>=0.10.0'}
@@ -3485,20 +3458,6 @@ packages:
     dependencies:
       lru-cache: 6.0.0
 
-  /seroval-plugins@1.0.5(seroval@1.0.5):
-    resolution: {integrity: sha512-8+pDC1vOedPXjKG7oz8o+iiHrtF2WswaMQJ7CKFpccvSYfrzmvKY9zOJWCg+881722wIHfwkdnRmiiDm9ym+zQ==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      seroval: ^1.0
-    dependencies:
-      seroval: 1.0.5
-    dev: false
-
-  /seroval@1.0.5:
-    resolution: {integrity: sha512-TM+Z11tHHvQVQKeNlOUonOWnsNM+2IBwZ4vwoi4j3zKzIpc5IDw8WPwCfcc8F17wy6cBcJGbZbFOR0UCuTZHQA==}
-    engines: {node: '>=10'}
-    dev: false
-
   /set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
     dev: true
@@ -3589,14 +3548,6 @@ packages:
       wcwidth: 1.0.1
       yargs: 15.4.1
     dev: true
-
-  /solid-js@1.8.16:
-    resolution: {integrity: sha512-rja94MNU9flF3qQRLNsu60QHKBDKBkVE1DldJZPIfn2ypIn3NV2WpSbGTQIvsyGPBo+9E2IMjwqnqpbgfWuzeg==}
-    dependencies:
-      csstype: 3.1.3
-      seroval: 1.0.5
-      seroval-plugins: 1.0.5(seroval@1.0.5)
-    dev: false
 
   /sort-object-keys@1.1.3:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
