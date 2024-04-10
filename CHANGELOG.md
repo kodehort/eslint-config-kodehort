@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 4.1.1
+
+### Patch Changes
+
+- 8bd282a: fix(deps): update dependency eslint-plugin-regexp to v2.5.0
+
 ## 4.1.0
 
 ### Minor Changes
