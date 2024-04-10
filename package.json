@@ -1,6 +1,6 @@
 {
   "name": "@kodehort/eslint-config",
-  "version": "4.1.1",
+  "version": "4.1.2",
   "description": "A curated set of ESLint configurations that we use across our projects and can be used in your projects.",
   "repository": "https://github.com/kodehort/eslint-config-kodehort",
   "license": "MIT",
