@@ -1,5 +1,15 @@
 # @kodehort/eslint-config
 
+## 5.0.0
+
+### Major Changes
+
+- b3dc1bd: Update to eslint 9.0.0
+
+### Patch Changes
+
+- 1847f40: Update deps
+
 ## 4.1.2
 
 ### Patch Changes
