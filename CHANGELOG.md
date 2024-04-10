@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 4.1.3
+
+### Patch Changes
+
+- 1847f40: Update deps
+
 ## 4.1.2
 
 ### Patch Changes
