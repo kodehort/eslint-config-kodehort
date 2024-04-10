@@ -1,6 +1,6 @@
-import vitestPlugin from 'eslint-plugin-vitest'
+import vitestPlugin from "eslint-plugin-vitest";
 
-import { defineConfig } from '../util/define-config.js'
+import { defineConfig } from "../util/define-config.js";
 
 export const vitest = defineConfig([
   {
@@ -13,7 +13,8 @@ export const vitest = defineConfig([
       vitest: vitestPlugin as any,
     },
     rules: {
-      ...vitestPlugin.configs.recommended.rules,
+      // @ts-expect-error - not sure why this is not working
+      ...vitestPlugin.configs?.recommended.rules,
     },
     settings: {
       vitest: {
@@ -21,4 +22,4 @@ export const vitest = defineConfig([
       },
     },
   },
-])
+]);

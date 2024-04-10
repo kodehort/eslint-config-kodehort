@@ -1,18 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "target": "es2021",
+    "module": "NodeNext",
+    "allowJs": true,
     "strict": true,
-    "isolatedModules": true,
-    "checkJs": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "target": "esnext",
-    "module": "node16",
-    "moduleResolution": "node16",
-    "declaration": true,
-    "inlineSourceMap": true,
-    "declarationMap": true,
     "outDir": "./dist"
   },
   "include": ["src"],
