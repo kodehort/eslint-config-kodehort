@@ -8,5 +8,6 @@ export default [
         project: ["./tsconfig.json", "./tsconfig.eslint.json"],
       },
     },
+    name: "project/overrides",
   },
 ];

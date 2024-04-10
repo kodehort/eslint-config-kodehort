@@ -1,5 +1,10 @@
-import pluginSecurity from 'eslint-plugin-security'
+import pluginSecurity from "eslint-plugin-security";
 
-import { defineConfig } from '../util/define-config.js'
+import { defineConfig } from "../util/define-config.js";
 
-export const security = defineConfig([pluginSecurity.configs.recommended])
+export const security = defineConfig([
+  {
+    ...pluginSecurity.configs.recommended,
+    name: "security/recommended",
+  },
+]);

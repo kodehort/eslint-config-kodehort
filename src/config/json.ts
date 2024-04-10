@@ -1,18 +1,11 @@
-import eslintPluginJsonc from 'eslint-plugin-jsonc'
-import jsoncParser from 'jsonc-eslint-parser'
+import eslintPluginJsonc from "eslint-plugin-jsonc";
 
-import { defineConfig } from '../util/define-config.js'
+import { defineConfig } from "../util/define-config.js";
 
 export const json = defineConfig([
-  ...eslintPluginJsonc.configs['flat/recommended-with-jsonc'],
-  {
-    files: ['*.json', '*.json5'],
-    ignores: ['package.json'],
-    languageOptions: {
-      parser: jsoncParser,
-    },
-    plugins: {
-      json: eslintPluginJsonc as any,
-    },
-  },
-])
+  Object.assign(
+    {},
+    ...eslintPluginJsonc.configs["flat/recommended-with-jsonc"],
+    { name: "json/recommended" },
+  ),
+]);

@@ -44,6 +44,7 @@ test();
 
 export const baseConfig: Linter.FlatConfig[] = [
   {
+    name: "global ignore",
     ignores: [
       "**/*.d.ts",
       "node_modules/**",
@@ -65,7 +66,7 @@ export const baseConfig: Linter.FlatConfig[] = [
   ...jsdoc({ files: allFiles }),
   ...imports({ files: allFiles }),
   ...comment({ files: allFiles }),
-  ...arrowFunctions({ files: allFiles }),
+  // ...arrowFunctions({ files: allFiles }),
   ...json(),
   ...yaml(),
   ...regex(),
