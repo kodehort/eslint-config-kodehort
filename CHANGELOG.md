@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 4.1.2
+
+### Patch Changes
+
+- 86a3ff0: fix vitest config
+
 ## 4.1.1
 
 ### Patch Changes
