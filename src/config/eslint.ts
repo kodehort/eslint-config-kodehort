@@ -1,30 +1,35 @@
-import eslintJs from '@eslint/js'
+import eslintJs from "@eslint/js";
 
-import { defineConfig } from '../util/define-config.js'
+import { defineConfig } from "../util/define-config.js";
 
 export const eslint = defineConfig([
-  eslintJs.configs.recommended,
   {
+    ...eslintJs.configs.recommended,
+    name: "eslintJs/recommended",
+  },
+
+  {
+    name: "eslintJs/overrides",
     rules: {
-      'no-console': 'error',
-      'object-shorthand': ['error', 'always'],
-      'prefer-destructuring': [
-        'error',
+      "no-console": "error",
+      "object-shorthand": ["error", "always"],
+      "prefer-destructuring": [
+        "error",
         { VariableDeclarator: { object: true } },
         { enforceForRenamedProperties: false },
       ],
-      'no-restricted-imports': [
-        'error',
+      "no-restricted-imports": [
+        "error",
         {
           paths: [
             {
-              name: 'luxon',
-              message: 'Please avoid using Luxon in favor of js-joda/core',
+              name: "luxon",
+              message: "Please avoid using Luxon in favor of js-joda/core",
             },
           ],
-          patterns: ['luxon'],
+          patterns: ["luxon"],
         },
       ],
     },
   },
-])
+]);

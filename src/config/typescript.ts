@@ -7,6 +7,7 @@ export const typescript = defineConfig([
   ...(tseslint.configs.recommendedTypeChecked as Linter.FlatConfig[]),
   ...(tseslint.configs.stylisticTypeChecked as Linter.FlatConfig[]),
   {
+    name: "typescript-eslint/overrides",
     rules: {
       "@typescript-eslint/no-misused-promises": [
         "error",

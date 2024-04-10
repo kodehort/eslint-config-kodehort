@@ -4,6 +4,7 @@ import { defineConfig } from "../util/define-config.js";
 
 export const vitest = defineConfig([
   {
+    name: "vitest/recommended",
     languageOptions: {
       globals: {
         ...vitestPlugin.environments.env.globals,

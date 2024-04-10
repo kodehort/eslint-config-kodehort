@@ -23,6 +23,7 @@
     "format": "prettier './**/*.{ts,tsx,md,js,css,json,yml,yaml}'",
     "format:check": "pnpm format --check",
     "format:write": "pnpm format --write",
+    "inspect": "eslint --inspect-config",
     "prelint": "pnpm build",
     "lint": "eslint ./src",
     "release": "changeset publish",
@@ -71,7 +72,7 @@
     "prettier": "^3.2.5"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0"
+    "eslint": "^9.0.0"
   },
   "node": ">=20.11.0"
 }
