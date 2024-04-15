@@ -1,5 +1,19 @@
 # @kodehort/eslint-config
 
+## 6.0.0
+
+### Major Changes
+
+- 209670d: Update to eslint 9.0.0
+
+### Minor Changes
+
+- 209670d: Upgrade to eslint v9 compatibility
+
+### Patch Changes
+
+- fe43c65: fix config
+
 ## 5.0.0
 
 ### Major Changes
