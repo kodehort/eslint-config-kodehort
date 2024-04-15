@@ -26,9 +26,9 @@ export const eslint = defineConfig([
               name: "unsafe-date-libraries",
               message:
                 "Please avoid using Luxon or Moment in favor of js-joda/core",
+              patterns: ["luxon", "moment"],
             },
           ],
-          patterns: ["luxon", "moment"],
         },
       ],
     },
