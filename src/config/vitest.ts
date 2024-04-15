@@ -14,7 +14,7 @@ export const vitest = defineConfig([
       vitest: vitestPlugin as any,
     },
     rules: {
-      // @ts-expect-error - not sure why this is not working
+      // @ts-ignore - not sure why this is not working
       ...vitestPlugin.configs?.recommended.rules,
     },
     settings: {

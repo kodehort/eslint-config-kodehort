@@ -3,10 +3,10 @@ import path from "node:path";
 
 import { glob } from "glob";
 
-export const inferPackageTypes = async (): Promise<PackageTypes> => {
-  const packageTypes: PackageTypes = {
-    browserPackages: [],
-    nodePackages: [],
+export const inferPackageTypes = async (): Promise<PackageTypesArray> => {
+  const packageTypes: PackageTypesSet = {
+    browserPackages: new Set<string>(),
+    nodePackages: new Set<string>(),
   };
   const packageFiles = await glob("**/package.json", {
     ignore: "node_modules/**",
@@ -14,9 +14,12 @@ export const inferPackageTypes = async (): Promise<PackageTypes> => {
   for (const packageFile of packageFiles) {
     const packagePath = path.dirname(packageFile);
     const packageType = await inferPackageType(packageFile);
-    packageTypes[packageType].push(packagePath);
+    packageTypes[packageType].add(packagePath);
   }
-  return packageTypes;
+  return {
+    browserPackages: [...packageTypes.browserPackages],
+    nodePackages: [...packageTypes.nodePackages],
+  };
 };
 
 const inferPackageType = async (packagePath: string): Promise<PackageType> => {
@@ -37,7 +40,11 @@ const containsDependencies = (pkg: PackageJson, dependency: string): boolean =>
 
 export type PackageType = "browserPackages" | "nodePackages";
 
-export type PackageTypes = {
+export type PackageTypesSet = {
+  [K in PackageType]: Set<string>;
+};
+
+export type PackageTypesArray = {
   [K in PackageType]: Array<string>;
 };
 
