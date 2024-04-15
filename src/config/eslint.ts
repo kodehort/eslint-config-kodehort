@@ -23,11 +23,12 @@ export const eslint = defineConfig([
         {
           paths: [
             {
-              name: "luxon",
-              message: "Please avoid using Luxon in favor of js-joda/core",
+              name: "unsafe-date-libraries",
+              message:
+                "Please avoid using Luxon or Moment in favor of js-joda/core",
             },
           ],
-          patterns: ["luxon"],
+          patterns: ["luxon", "moment"],
         },
       ],
     },

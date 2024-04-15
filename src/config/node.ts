@@ -12,5 +12,18 @@ export const node = defineConfig([
     languageOptions: {
       globals: globals.node,
     },
+    settings: {
+      node: {
+        tryExtensions: [".js", ".json", ".node", ".ts", ".tsx"],
+      },
+    },
+    rules: {
+      "n/no-missing-import": [
+        "error",
+        {
+          allowModules: ["template-typescript-node-package"],
+        },
+      ],
+    },
   },
 ]);
