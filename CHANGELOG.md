@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 6.0.1
+
+### Patch Changes
+
+- 8240750: restucture the repo and files
+
 ## 6.0.0
 
 ### Major Changes
