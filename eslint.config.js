@@ -1,13 +1,13 @@
-import { baseConfig } from "./dist/index.js";
+import { baseConfig } from './lib/index.js'
 
 export default [
   ...baseConfig,
   {
     languageOptions: {
       parserOptions: {
-        project: ["./tsconfig.json", "./tsconfig.eslint.json"],
+        project: ['./tsconfig.json', './tsconfig.eslint.json'],
       },
     },
-    name: "project/overrides",
+    name: 'project/overrides',
   },
-];
+]

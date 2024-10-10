@@ -1,3 +1,3 @@
 export function testFunction() {
-  return true;
+  return true
 }

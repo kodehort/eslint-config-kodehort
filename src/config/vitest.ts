@@ -1,10 +1,10 @@
-import vitestPlugin from "eslint-plugin-vitest";
+import vitestPlugin from 'eslint-plugin-vitest'
 
-import { defineConfig } from "../util/define-config.js";
+import { defineConfig } from '../util/define-config.js'
 
 export const vitest = defineConfig([
   {
-    name: "vitest/recommended",
+    name: 'vitest/recommended',
     languageOptions: {
       globals: {
         ...vitestPlugin.environments.env.globals,
@@ -23,4 +23,4 @@ export const vitest = defineConfig([
       },
     },
   },
-]);
+])

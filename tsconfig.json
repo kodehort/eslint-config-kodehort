@@ -1,15 +1,24 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "es2021",
-    "module": "NodeNext",
-    "allowJs": true,
-    "strict": true,
+    /* Base Options: */
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
-  },
-  "include": ["src"],
-  "exclude": ["dist", "node_modules"]
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "NodeNext",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    /* If transpiling with TypeScript: */
+    "module": "NodeNext",
+    "lib": ["es2022"],
+    "noEmit": true
+  }
 }

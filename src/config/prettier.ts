@@ -1,12 +1,10 @@
-import configPrettier from "eslint-config-prettier";
-import pluginPrettier from "eslint-plugin-prettier";
+import pluginPrettier from 'eslint-plugin-prettier/recommended'
 
-import { defineConfig } from "../util/define-config.js";
+import { defineConfig } from '../util/define-config.js'
 
 export const prettierThisMustBePutLast = defineConfig([
   {
-    name: "prettier/recommended",
-    plugins: { prettier: pluginPrettier },
-    rules: configPrettier.rules,
+    name: 'prettier/recommended',
+    ...pluginPrettier,
   },
-]);
+])
