@@ -1,6 +1,6 @@
 {
   "name": "@kodehort/eslint-config",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "description": "A curated set of ESLint configurations that we use across our projects and can be used in your projects.",
   "keywords": [
     "eslint",
