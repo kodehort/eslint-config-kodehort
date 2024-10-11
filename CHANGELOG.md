@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 6.0.2
+
+### Patch Changes
+
+- b33fd1f: fix astro and typescript
+
 ## 6.0.1
 
 ### Patch Changes
