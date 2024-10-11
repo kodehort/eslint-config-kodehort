@@ -1,4 +1,4 @@
-import vitestPlugin from 'eslint-plugin-vitest'
+import vitestPlugin from '@vitest/eslint-plugin'
 
 import { defineConfig } from '../util/define-config.js'
 
