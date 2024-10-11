@@ -1,5 +1,11 @@
 # @kodehort/eslint-config
 
+## 6.0.3
+
+### Patch Changes
+
+- 1451abb: update vitest plugin
+
 ## 6.0.2
 
 ### Patch Changes
