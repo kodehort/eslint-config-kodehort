@@ -4,9 +4,4 @@ import { defineConfig } from '../util/define-config.js'
 
 const astroConfig = eslintPluginAstro.configs['flat/recommended']
 
-export const astro = defineConfig([
-  {
-    name: 'astro/recommended',
-    ...astroConfig,
-  },
-])
+export const astro = defineConfig([...astroConfig])

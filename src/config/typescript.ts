@@ -1,12 +1,19 @@
-import type { Linter } from 'eslint'
-
 import tseslint from 'typescript-eslint'
 
 import { defineConfig } from '../util/define-config.js'
 
 export const typescript = defineConfig([
-  ...(tseslint.configs.recommendedTypeChecked as Linter.FlatConfig[]),
-  ...(tseslint.configs.stylisticTypeChecked as Linter.FlatConfig[]),
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
+  {
+    name: 'typescript-eslint/parserOptions',
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
   {
     name: 'typescript-eslint/overrides',
     rules: {
@@ -24,6 +31,7 @@ export const typescript = defineConfig([
           varsIgnorePattern: '^_',
         },
       ],
+      '@typescript-eslint/prefer-namespace-keyword': 'off',
       '@typescript-eslint/restrict-template-expressions': 'off',
       '@typescript-eslint/triple-slash-reference': 'off',
       '@typescript-eslint/consistent-type-imports': [

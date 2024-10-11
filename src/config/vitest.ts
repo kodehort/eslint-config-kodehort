@@ -11,11 +11,10 @@ export const vitest = defineConfig([
       },
     },
     plugins: {
-      vitest: vitestPlugin as any,
+      vitest: vitestPlugin,
     },
     rules: {
-      // @ts-ignore - not sure why this is not working
-      ...vitestPlugin.configs?.recommended.rules,
+      ...vitestPlugin.configs.recommended.rules,
     },
     settings: {
       vitest: {

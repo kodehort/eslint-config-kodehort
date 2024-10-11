@@ -13,7 +13,6 @@ import { prettierThisMustBePutLast } from './config/prettier.js'
 import { regex } from './config/regex.js'
 import { security } from './config/security.js'
 import { solid } from './config/solid.js'
-import { turbo } from './config/turbo.js'
 import { typescript } from './config/typescript.js'
 import { unicorn } from './config/unicorn.js'
 import { vitest } from './config/vitest.js'
@@ -31,6 +30,9 @@ const browserFiles = browserPackages.map((dir) =>
 )
 const nodeFiles = nodePackages.map((dir) =>
   dir === '.' ? '**/*.{ts,js,cjs,mjs}' : `${dir}/**/*.{ts,js,cjs,mjs}`,
+)
+const typescriptFiles = nodePackages.map((dir) =>
+  dir === '.' ? '**/*.{ts,tsx}' : `${dir}/**/*.{ts,tsx}`,
 )
 const astroFiles = browserPackages.map((dir) => `${dir}/**/*.{astro}`)
 const testFiles = [
@@ -51,7 +53,7 @@ function test() {}
 
 test()
 
-export const baseConfig: Linter.FlatConfig | TSESLint.FlatConfig.Config[] = [
+export const baseConfig: Linter.Config | TSESLint.FlatConfig.Config[] = [
   {
     name: 'global ignore',
     ignores: [
@@ -60,13 +62,17 @@ export const baseConfig: Linter.FlatConfig | TSESLint.FlatConfig.Config[] = [
       'pnpm-lock.yaml',
       '**/pnpm-lock.yaml',
       'package.json',
+      '.sst/**',
+      '**/dist/**',
+      '.turbo/**',
+      '**/.turbo/**',
       ...unignore(rootFiles),
     ],
   },
   ...browser({ files: [...browserFiles] }),
   ...node({ files: [...rootFiles, ...nodeFiles] }),
   ...eslint({ files: allFiles }),
-  ...typescript({ files: allFiles }),
+  ...typescript({ files: typescriptFiles }),
   ...astro({ files: astroFiles }),
   ...solid({ files: browserFiles }),
   ...security({ files: allFiles }),
@@ -78,6 +84,5 @@ export const baseConfig: Linter.FlatConfig | TSESLint.FlatConfig.Config[] = [
   ...yaml(),
   ...regex(),
   ...onlyWarn(),
-  ...turbo({ files: allFiles }),
   ...prettierThisMustBePutLast(),
 ]

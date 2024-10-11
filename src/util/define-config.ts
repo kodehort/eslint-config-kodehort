@@ -1,11 +1,10 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import type { Linter } from 'eslint'
 
-type FlatConfig = Linter.FlatConfig
-type Files = FlatConfig['files']
+type Files = Linter.Config['files']
 
 export const defineConfig =
-  <T extends FlatConfig | TSESLint.FlatConfig.Config>(
+  <T extends Linter.Config | TSESLint.FlatConfig.Config>(
     config: T[] | ((params: { files: NonNullable<Files> }) => T[]),
   ) =>
   ({ files }: { files?: Files } = {}): T[] => {

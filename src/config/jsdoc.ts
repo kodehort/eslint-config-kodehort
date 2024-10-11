@@ -16,8 +16,11 @@ export const jsdoc = defineConfig([
       'jsdoc/informative-docs': 'error',
       'jsdoc/require-jsdoc': 'off',
       'jsdoc/require-param': 'off',
+      'jsdoc/require-param-type': 'off',
       'jsdoc/require-property': 'off',
       'jsdoc/require-returns': 'off',
+      'jsdoc/require-returns-type': 'off',
+      'jsdoc/tag-lines': 'off',
     },
   },
 ])
