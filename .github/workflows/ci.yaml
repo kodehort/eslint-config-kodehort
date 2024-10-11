@@ -16,42 +16,19 @@ jobs:
     permissions: write-all
     steps:
       - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v3
-        id: pnpm-install
-        with:
-          version: 8
-          run_install: false
-
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20.x
+          cache: 'pnpm'
 
-      - id: pnpm-cache-config
-        shell: bash
-        run: |
-          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v4
-        name: Cache NPM dependencies
-        id: deps-cache
-        with:
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          path: |
-            ${{ steps.pnpm-cache-config.outputs.pnpm_cache_dir }}
-            **/node_modules
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: install deps (with cache)
-        if: steps.deps-cache.outputs.cache-hit != 'true'
-        shell: bash
+      - name: Install dependencies
         run: pnpm install
 
       - name: Run CI
         run: pnpm run ci
 
-      - name: Create Release Pull Request or Publish
+      - name: Create Release Pull Request or Publish to NPM
         id: changesets
         uses: changesets/action@v1
         with:
