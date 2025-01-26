@@ -49,7 +49,7 @@ importers:
         version: 1.1.0
       eslint-plugin-perfectionist:
         specifier: ^4.0.0
-        version: 4.6.0(eslint@9.0.0)(typescript@5.7.3)
+        version: 4.7.0(eslint@9.0.0)(typescript@5.7.3)
       eslint-plugin-prettier:
         specifier: ^5.2.1
         version: 5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@10.0.1(eslint@9.0.0))(eslint@9.0.0)(prettier@3.4.2)
@@ -1041,8 +1041,8 @@ packages:
     resolution: {integrity: sha512-2tktqUAT+Q3hCAU0iSf4xAN1k9zOpjK5WO8104mB0rT/dGhOa09582HN5HlbxNbPRZ0THV7nLGvzugcNOSjzfA==}
     engines: {node: '>=6'}
 
-  eslint-plugin-perfectionist@4.6.0:
-    resolution: {integrity: sha512-kOswTebUK0LlYExRwqz7YQtvyTUIRsKfp8XrwBBeHGh2e8MBOS6K+7VvG6HpmNckyKySi1I96uPeAlptMFGcRQ==}
+  eslint-plugin-perfectionist@4.7.0:
+    resolution: {integrity: sha512-e2ODzm2SsAztFWY3ZRJd1K702vyl8Sapacjc3JluOW294CfA3+jfjin+UxjcrK48EvlNIMOp+JJB9N54YR2LRw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -3209,7 +3209,7 @@ snapshots:
 
   eslint-plugin-only-warn@1.1.0: {}
 
-  eslint-plugin-perfectionist@4.6.0(eslint@9.0.0)(typescript@5.7.3):
+  eslint-plugin-perfectionist@4.7.0(eslint@9.0.0)(typescript@5.7.3):
     dependencies:
       '@typescript-eslint/types': 8.21.0
       '@typescript-eslint/utils': 8.21.0(eslint@9.0.0)(typescript@5.7.3)
