@@ -25,7 +25,7 @@ importers:
         version: 8.24.0(eslint@9.0.0)(typescript@5.7.3)
       '@vitest/eslint-plugin':
         specifier: ^1.1.7
-        version: 1.1.28(@typescript-eslint/utils@8.24.0(eslint@9.0.0)(typescript@5.7.3))(eslint@9.0.0)(typescript@5.7.3)
+        version: 1.1.30(@typescript-eslint/utils@8.24.0(eslint@9.0.0)(typescript@5.7.3))(eslint@9.0.0)(typescript@5.7.3)
       eslint:
         specifier: ^9.0.0
         version: 9.0.0
@@ -700,8 +700,8 @@ packages:
     resolution: {integrity: sha512-kArLq83QxGLbuHrTMoOEWO+l2MwsNS2TGISEdx8xgqpkbytB07XmlQyQdNDrCc1ecSqx0cnmhGvpX+VBwqqSkg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@vitest/eslint-plugin@1.1.28':
-    resolution: {integrity: sha512-nf7oQ0Gem/SeEfNvutFZcOjPGtcj60fyODO5uH6LZtMZl9RaEvo8/BRLcGY4xYX14JkThwpvhwFdjSX0WxMjxg==}
+  '@vitest/eslint-plugin@1.1.30':
+    resolution: {integrity: sha512-gka7VmgfDXmVagcs/SV5Ft23LLrqSzvjX8ATZMLTXIswVRx+i1XfIgy+w2WDrLvhio/eyR6EEb1qM0+hmlF00w==}
     peerDependencies:
       '@typescript-eslint/utils': '>= 8.0'
       eslint: '>= 8.57.0'
@@ -2873,7 +2873,7 @@ snapshots:
       '@typescript-eslint/types': 8.24.0
       eslint-visitor-keys: 4.2.0
 
-  '@vitest/eslint-plugin@1.1.28(@typescript-eslint/utils@8.24.0(eslint@9.0.0)(typescript@5.7.3))(eslint@9.0.0)(typescript@5.7.3)':
+  '@vitest/eslint-plugin@1.1.30(@typescript-eslint/utils@8.24.0(eslint@9.0.0)(typescript@5.7.3))(eslint@9.0.0)(typescript@5.7.3)':
     dependencies:
       '@typescript-eslint/utils': 8.24.0(eslint@9.0.0)(typescript@5.7.3)
       eslint: 9.0.0
